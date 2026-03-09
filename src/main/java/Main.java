@@ -24,5 +24,10 @@ public class Main {
         }
 
         System.out.print(Arrays.toString(groceries));
+
+        // Trying out OpskriftSamling
+        OpskriftSamling samling = new OpskriftSamling(opskrifter);
+        System.out.println(Arrays.toString(samling.getOpskriftWithoutIngredient("mel")));
+
     }
     }
