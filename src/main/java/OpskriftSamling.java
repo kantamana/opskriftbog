@@ -1,19 +1,19 @@
 import java.util.Arrays;
 
 public class OpskriftSamling {
-    public Opskriftsbog[] opskrifter;
+    public Opskrift[] opskrifter;
 
-    public OpskriftSamling(Opskriftsbog[] opskrifter) {
+    public OpskriftSamling(Opskrift[] opskrifter) {
         this.opskrifter = opskrifter;
     }
 
 
-    public Opskriftsbog[] getOpskriftWithoutIngredient(String keyword) {
-        Opskriftsbog[] retval = new Opskriftsbog[9999];
+    public Opskrift[] getOpskriftWithoutIngredient(String keyword) {
+        Opskrift[] retval = new Opskrift[9999];
         int counter = 0;
 
         for (int opskriftIndex = 0; opskriftIndex < opskrifter.length; opskriftIndex++) {
-            Opskriftsbog opskrift = opskrifter[opskriftIndex];
+            Opskrift opskrift = opskrifter[opskriftIndex];
             boolean containsIngredient = false;
 
             for (int ingrediensIndex = 0; ingrediensIndex < opskrift.ingredients.length; ingrediensIndex++) {

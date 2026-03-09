@@ -1,12 +1,12 @@
 import java.util.Arrays;
 
-public class Opskriftsbog {
+public class Opskrift {
     String title;
     String[] ingredients;
     String procedure;
     boolean vegetarisk;
 
-    public Opskriftsbog(String title, String[] ingredients, String procedure, boolean vegetarisk) {
+    public Opskrift(String title, String[] ingredients, String procedure, boolean vegetarisk) {
         this.title = title;
         this.ingredients = ingredients;
         this.procedure = procedure;
