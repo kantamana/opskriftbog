@@ -11,6 +11,14 @@ public class RecipeCollection {
         return recipes;
     }
 
+    public void addRecipe (Recipe recipe) {
+        Recipe[] retval  = new Recipe[recipes.length + 1];
+        for (int i = 0; i < recipes.length; i++) {
+            retval[i] = recipes[i];
+        }
+        retval[retval.length -1] = recipe;
+    }
+
     public void setRecipes(Recipe[] recipes) {
         this.recipes = recipes;
     }
