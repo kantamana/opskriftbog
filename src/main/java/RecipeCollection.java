@@ -17,14 +17,15 @@ public class RecipeCollection {
             retval[i] = recipes[i];
         }
         retval[retval.length -1] = recipe;
+        recipes = retval;
     }
 
     public void setRecipes(Recipe[] recipes) {
         this.recipes = recipes;
     }
 
-    public Recipe[] getOpskriftWithoutIngredient (String keyword){
-        Recipe[] retval = new Recipe[9999];
+    public Recipe[] getRecipesWithoutIngredient (String keyword){
+        Recipe[] retval = new Recipe[recipes.length];
         int counter = 0;
 
         for (int recipeIndex = 0; recipeIndex < getRecipes().length; recipeIndex++) {
