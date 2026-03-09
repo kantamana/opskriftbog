@@ -6,10 +6,10 @@ public class Main {
         //opskrifter oprettet af forskellige brugere
         Opskriftsbog[] opskrifter = new Opskriftsbog[5];
         opskrifter[0] = new Opskriftsbog("Donut", new String[]{"mælk", "mel", "sukker"}, "lav donuts", true);
-        opskrifter[1] = new Opskriftsbog("lassagne", new String[]{"mælk", "mel", "sukker"}, "lav donuts", false);
-        opskrifter[2] = new Opskriftsbog("Donuts igen", new String[]{"mælk", "mel", "sukker"}, "lav donuts", true);
-        opskrifter[3] = new Opskriftsbog("salat", new String[]{"mælk", "mel", "sukker"}, "lav donuts", false);
-        opskrifter[4] = new Opskriftsbog("peber", new String[]{"mælk", "mel", "sukker"}, "lav donuts", true);
+        opskrifter[1] = new Opskriftsbog("lassagne", new String[]{"kød", "pasta", "tomat"}, "kom i et fad", false);
+        opskrifter[2] = new Opskriftsbog("pizza", new String[]{"tomat", "ost", "dej"}, "put på pizza", true);
+        opskrifter[3] = new Opskriftsbog("thaifood", new String[]{"broccoli", "bambus", "ris"}, "steg på panden", false);
+        opskrifter[4] = new Opskriftsbog("Boller i karry", new String[]{"fløde", "køb", "karry"}, "rør det sammen", true);
 
         //Valgte opskrifter af brugeren
         Opskriftsbog[] chosenRecipes = new Opskriftsbog[2];
