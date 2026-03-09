@@ -3,14 +3,8 @@ public class Brugerflade {
     OpskriftSamling chosenRecipes;
     OpskriftSamling basket;
 
-    public Brugerflade(OpskriftSamling available, OpskriftSamling chosenRecipes, OpskriftSamling basket) {
-        this.allRecipes = available;
-        this.chosenRecipes = chosenRecipes;
-        this.basket = basket;
-    }
-
-    public Brugerflade(OpskriftSamling available) {
-        this.allRecipes = available;
+    public Brugerflade(OpskriftSamling allRecipes) {
+        this.allRecipes = allRecipes;
     }
 
     public OpskriftSamling getAllRecipes() {
