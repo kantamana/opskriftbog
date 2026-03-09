@@ -1,16 +1,19 @@
 import java.util.Arrays;
 
-public class Opskrift {
+public class Recipe {
     String title;
     String[] ingredients;
     String procedure;
-    boolean vegetarisk;
+    boolean vegetarian;
+    double rating;
+    int numberOfRatings;
+    String[] comments;
 
-    public Opskrift(String title, String[] ingredients, String procedure, boolean vegetarisk) {
+    public Recipe(String title, String[] ingredients, String procedure, boolean vegetarian) {
         this.title = title;
         this.ingredients = ingredients;
         this.procedure = procedure;
-        this.vegetarisk = vegetarisk;
+        this.vegetarian = vegetarian;
     }
 
     @Override
