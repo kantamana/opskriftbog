@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Opskriftsbog {
     String title;
     String[] ingredients;
@@ -16,6 +18,9 @@ public class Opskriftsbog {
                 Opskrift: %s
                 Ingredienser: %s
                 Fremgangsmåde: %s
-                """, title, ingredients, procedure);
+                """, title, Arrays.toString(getIngredients()), procedure);
+    }
+    public String[] getIngredients(){
+        return ingredients;
     }
 }
