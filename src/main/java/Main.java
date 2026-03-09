@@ -16,8 +16,8 @@ public class Main {
         System.out.println("Inkøb: " + Arrays.toString(indkøb.groceries()));
 
         // Trying out OpskriftSamling
-        // OpskriftSamling samling = new OpskriftSamling(opskrifter);
-       // System.out.println(Arrays.toString(samling.getOpskriftWithoutIngredient("mel")));
+        OpskriftSamling samling = new OpskriftSamling(opskrifter);
+       System.out.println(Arrays.toString(samling.getOpskriftWithoutIngredient("mel")));
 
     }
     }
