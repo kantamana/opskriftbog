@@ -69,4 +69,20 @@ public class RecipeCollection {
         }
         return groceries;
     }
+
+    //Returner vegetariske opskrifter
+    public Recipe[] vegetarianRecipes(RecipeCollection recipes) {
+        Recipe[] vegetarianRecipes = new Recipe[recipes.getRecipes().length];
+        int counter = 0;
+
+        for (int i = 0; i < recipes.getRecipes().length; i++ ) {
+            if (recipes.getRecipes()[i].vegetarian) {
+                vegetarianRecipes[counter] = recipes.getRecipes()[i];
+                counter++;
+            }
+        }
+        vegetarianRecipes = Arrays.copyOfRange(vegetarianRecipes, 0, counter);
+
+        return vegetarianRecipes;
+    }
     }

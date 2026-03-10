@@ -12,14 +12,18 @@ public class Main {
         new Recipe("thaifood", new String[]{"broccoli", "bambus", "ris"}, "steg på panden", false),
         new Recipe("Boller i karry", new String[]{"fløde", "køb", "karry"}, "rør det sammen", true)}
         );
-        System.out.println("Inkøb: " + Arrays.toString(recipeCollection.groceries()));
+        //System.out.println("Inkøb: " + Arrays.toString(recipeCollection.groceries()));
 
         // Trying out OpskriftSamling
 
+        System.out.println(Arrays.toString(recipeCollection.vegetarianRecipes(recipeCollection)));
+
+
+
         // System.out.println(Arrays.toString(chosenRecipes.getOpskriftWithoutIngredient("mel")));
 
-        UserInterface ui = new UserInterface(recipeCollection);
-        ui.addRecipe();
+        //UserInterface ui = new UserInterface(recipeCollection);
+        //ui.addRecipe();
 
     }
 
