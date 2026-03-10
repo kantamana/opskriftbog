@@ -18,4 +18,8 @@ public class Comment {
                 %s: %s stjerner
                 """, comment, rating);
     }
+
+    public int getRating() {
+        return rating;
+    }
 }

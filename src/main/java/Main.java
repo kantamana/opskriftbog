@@ -20,8 +20,10 @@ public class Main {
 
 
         recipeCollection.getRecipes()[0].addComment(new Comment("nice", 5));
+        recipeCollection.getRecipes()[0].addComment(new Comment("nice", 1));
+        recipeCollection.getRecipes()[0].addComment(new Comment("nice", 2));
 
-
+        System.out.println(recipeCollection.getRecipes()[0].rating);
 
         // System.out.println(Arrays.toString(chosenRecipes.getOpskriftWithoutIngredient("mel")));
 

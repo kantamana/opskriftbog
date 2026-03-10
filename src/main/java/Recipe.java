@@ -1,5 +1,6 @@
 import java.util.Arrays;
 
+
 public class Recipe {
     String title;
     String[] ingredients;
@@ -59,5 +60,16 @@ public class Recipe {
         }
         newCommentList[newCommentList.length - 1] = comment;
         comments = newCommentList;
+        setNumberOfRatings(numberOfRatings + 1);
+        updateRating();
+    }
+
+    public void updateRating(){
+        double sum = 0;
+        for (int i = 0; i < getNumberOfRatings(); i++) {
+            sum += comments[i].getRating();
+        }
+        double mean = sum / getNumberOfRatings();
+        this.rating = (double) Math.round(mean * 100)/100;
     }
 }
