@@ -27,8 +27,11 @@ public class Main {
 
         // System.out.println(Arrays.toString(chosenRecipes.getOpskriftWithoutIngredient("mel")));
 
-        //UserInterface ui = new UserInterface(recipeCollection);
+        UserInterface ui = new UserInterface(recipeCollection);
         //ui.addRecipe();
+        ui.fetchGroceryList();
+
+
 
 
     }

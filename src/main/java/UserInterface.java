@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -43,19 +44,28 @@ public class UserInterface {
 
     }
 
-/*
-    public fetchGroceryList () {
+    private int[] parseStringOfIntegers (String string) {
+        String[] tokens = string.split(" ");
+        int[] integers = new int[tokens.length];
+        for (int i = 0; i < integers.length; i++) {
+            integers[i] = Integer.parseInt(tokens[i]);
+        }
+        return integers;
+    }
+
+    public void fetchGroceryList () {
         String[] availableDishNames = allRecipes.getRecipeNames();
         for (int i = 0; i < availableDishNames.length; i++) {
             System.out.println(String.format("ret #%s: %s\n", i, availableDishNames[i]));
         }
         System.out.println("vælg fra listen de retter du vil have som tal med enkelt mellemrum imellem");
 
-        String title = scan.nextLine();
+        int[] groceryIndicies = parseStringOfIntegers(scan.nextLine());
 
+        for (int i = 0; i < groceryIndicies.length; i++) {
+            System.out.println(Arrays.toString(allRecipes.getRecipes()[groceryIndicies[i]].ingredients));
+        }
     }
-*/
-
 
     public RecipeCollection getAllRecipes() {
         return allRecipes;

@@ -51,7 +51,7 @@ public class RecipeCollection {
         return Arrays.copyOfRange(returnValue, 0, counter);
     }
 
-    //Valgte opskrifter af brugeren
+/*    //Valgte opskrifter af brugeren
     public Recipe[] chosenRecipes() {
         Recipe[] chosenRecipes = new Recipe[3];
         chosenRecipes[0] = getRecipes()[0];
@@ -69,7 +69,7 @@ public class RecipeCollection {
             groceries[i] = Arrays.toString(chosenRecipes[i].getIngredients());
         }
         return groceries;
-    }
+    }*/
 
     String[] getRecipeNames() {
         String[] recipeNames = new String[getRecipes().length];
