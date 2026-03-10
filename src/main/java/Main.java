@@ -16,14 +16,14 @@ public class Main {
 
         // Trying out OpskriftSamling
 
-        //System.out.println(Arrays.toString(recipeCollection.vegetarianRecipes(recipeCollection)));
+        System.out.println(Arrays.toString(recipeCollection.vegetarianRecipes(recipeCollection)));
 
 
 
         // System.out.println(Arrays.toString(chosenRecipes.getOpskriftWithoutIngredient("mel")));
 
-        UserInterface ui = new UserInterface(recipeCollection);
-        ui.addRecipe();
+        //UserInterface ui = new UserInterface(recipeCollection);
+        //ui.addRecipe();
 
     }
 
