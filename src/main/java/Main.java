@@ -19,11 +19,15 @@ public class Main {
         System.out.println(Arrays.toString(recipeCollection.vegetarianRecipes(recipeCollection)));
 
 
+        recipeCollection.getRecipes()[0].addComment(new Comment("nice", 5));
+
+
 
         // System.out.println(Arrays.toString(chosenRecipes.getOpskriftWithoutIngredient("mel")));
 
         //UserInterface ui = new UserInterface(recipeCollection);
         //ui.addRecipe();
+
 
     }
 

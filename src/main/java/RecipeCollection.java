@@ -20,16 +20,6 @@ public class RecipeCollection {
         recipes = returnValue;
     }
 
-    public void addComment(Recipe recipe, Comment comment) {
-        Comment[] newCommentList = new Comment[recipe.getNumberOfRatings() + 1];
-
-        for (int i = 0; i < recipe.getNumberOfRatings(); i++) {
-            newCommentList[i] = recipe.comments[i];
-        }
-        newCommentList[newCommentList.length - 1] = comment;
-        recipe.comments = newCommentList;
-    }
-
 
     public void setRecipes(Recipe[] recipes) {
         this.recipes = recipes;

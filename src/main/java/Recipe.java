@@ -50,4 +50,14 @@ public class Recipe {
     public void setNumberOfRatings(int numberOfRatings) {
         this.numberOfRatings = numberOfRatings;
     }
+
+    public void addComment(Comment comment) {
+        Comment[] newCommentList = new Comment[getNumberOfRatings() + 1];
+
+        for (int i = 0; i < getNumberOfRatings(); i++) {
+            newCommentList[i] = comments[i];
+        }
+        newCommentList[newCommentList.length - 1] = comment;
+        comments = newCommentList;
+    }
 }
