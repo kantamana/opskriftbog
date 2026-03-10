@@ -8,7 +8,7 @@ public class Recipe {
     String dishType;
     double rating;
     int numberOfRatings;
-    String[] comments;
+    Comment[] comments;
 
     public Recipe(String title, String[] ingredients, String procedure, boolean vegetarian, String dishType) {
         this.title = title;
