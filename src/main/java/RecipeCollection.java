@@ -12,12 +12,12 @@ public class RecipeCollection {
     }
 
     public void addRecipe (Recipe recipe) {
-        Recipe[] retval  = new Recipe[recipes.length + 1];
+        Recipe[] returnValue  = new Recipe[recipes.length + 1];
         for (int i = 0; i < recipes.length; i++) {
-            retval[i] = recipes[i];
+            returnValue[i] = recipes[i];
         }
-        retval[retval.length -1] = recipe;
-        recipes = retval;
+        returnValue[returnValue.length -1] = recipe;
+        recipes = returnValue;
     }
 
     public void setRecipes(Recipe[] recipes) {
