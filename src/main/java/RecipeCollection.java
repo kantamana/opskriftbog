@@ -72,15 +72,18 @@ public class RecipeCollection {
 
     //Returner vegetariske opskrifter
     public Recipe[] vegetarianRecipes(RecipeCollection recipes) {
-        Recipe[] vegetarianRecipes = new Recipe[recipes.getRecipes().length];
+        Recipe[] vegetarianRecipes = new Recipe[recipes.getRecipes().length]; //laver en ny tom liste
         int counter = 0;
 
+
+        //Tilføjer opskriften til den tomme liste, hvis den er vegetarisk
         for (int i = 0; i < recipes.getRecipes().length; i++ ) {
             if (recipes.getRecipes()[i].vegetarian) {
                 vegetarianRecipes[counter] = recipes.getRecipes()[i];
                 counter++;
             }
         }
+        //fjerner nulls fra listen
         vegetarianRecipes = Arrays.copyOfRange(vegetarianRecipes, 0, counter);
 
         return vegetarianRecipes;
