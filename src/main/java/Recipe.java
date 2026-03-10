@@ -5,15 +5,17 @@ public class Recipe {
     String[] ingredients;
     String procedure;
     boolean vegetarian;
+    String dishType;
     double rating;
     int numberOfRatings;
     String[] comments;
 
-    public Recipe(String title, String[] ingredients, String procedure, boolean vegetarian) {
+    public Recipe(String title, String[] ingredients, String procedure, boolean vegetarian, String dishType) {
         this.title = title;
         this.ingredients = ingredients;
         this.procedure = procedure;
         this.vegetarian = vegetarian;
+        this.dishType = dishType;
     }
 
     @Override
@@ -22,9 +24,13 @@ public class Recipe {
                 Opskrift: %s
                 Ingredienser: %s
                 Fremgangsmåde: %s
-                """, title, Arrays.toString(getIngredients()), procedure);
+                Typeret: %s
+                """, title, Arrays.toString(getIngredients()), procedure, dishType);
     }
     public String[] getIngredients(){
         return ingredients;
+    }
+    public String getDishType(){
+        return dishType;
     }
 }

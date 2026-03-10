@@ -12,12 +12,12 @@ public class RecipeCollection {
     }
 
     public void addRecipe (Recipe recipe) {
-        Recipe[] retval  = new Recipe[recipes.length + 1];
+        Recipe[] returnValue  = new Recipe[recipes.length + 1];
         for (int i = 0; i < recipes.length; i++) {
-            retval[i] = recipes[i];
+            returnValue[i] = recipes[i];
         }
-        retval[retval.length -1] = recipe;
-        recipes = retval;
+        returnValue[returnValue.length -1] = recipe;
+        recipes = returnValue;
     }
 
     public void setRecipes(Recipe[] recipes) {
@@ -25,7 +25,7 @@ public class RecipeCollection {
     }
 
     public Recipe[] getRecipesWithoutIngredient (String keyword){
-        Recipe[] retval = new Recipe[recipes.length];
+        Recipe[] returnValue = new Recipe[recipes.length];
         int counter = 0;
 
         for (int recipeIndex = 0; recipeIndex < getRecipes().length; recipeIndex++) {
@@ -42,12 +42,12 @@ public class RecipeCollection {
             }
 
             if (!containsIngredient) {
-                retval[counter] = recipe;
+                returnValue[counter] = recipe;
                 counter++;
             }
         }
 
-        return Arrays.copyOfRange(retval, 0, counter);
+        return Arrays.copyOfRange(returnValue, 0, counter);
     }
 
     //Valgte opskrifter af brugeren
