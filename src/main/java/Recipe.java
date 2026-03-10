@@ -24,9 +24,13 @@ public class Recipe {
                 Opskrift: %s
                 Ingredienser: %s
                 Fremgangsmåde: %s
-                """, title, Arrays.toString(getIngredients()), procedure);
+                Typeret: %s
+                """, title, Arrays.toString(getIngredients()), procedure, dishType);
     }
     public String[] getIngredients(){
         return ingredients;
+    }
+    public String getDishType(){
+        return dishType;
     }
 }

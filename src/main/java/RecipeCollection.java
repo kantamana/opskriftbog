@@ -25,7 +25,7 @@ public class RecipeCollection {
     }
 
     public Recipe[] getRecipesWithoutIngredient (String keyword){
-        Recipe[] retval = new Recipe[recipes.length];
+        Recipe[] returnValue = new Recipe[recipes.length];
         int counter = 0;
 
         for (int recipeIndex = 0; recipeIndex < getRecipes().length; recipeIndex++) {
@@ -42,12 +42,12 @@ public class RecipeCollection {
             }
 
             if (!containsIngredient) {
-                retval[counter] = recipe;
+                returnValue[counter] = recipe;
                 counter++;
             }
         }
 
-        return Arrays.copyOfRange(retval, 0, counter);
+        return Arrays.copyOfRange(returnValue, 0, counter);
     }
 
     //Valgte opskrifter af brugeren

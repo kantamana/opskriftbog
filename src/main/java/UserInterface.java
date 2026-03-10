@@ -30,7 +30,15 @@ public class UserInterface {
         System.out.println("Er retten vegetarisk?\nSkriv 1 for ja eller 2 for nej");
         int vegetarian = scan.nextInt();
         boolean isVegetarian = vegetarian == 1;
-        allRecipes.addRecipe(new Recipe(title, ingredients, procedure, isVegetarian));
+
+        System.out.println("Hvilken type er retten?");
+        String dishType = scan.nextLine();
+
+
+        Recipe newRecipe = new Recipe(title, ingredients, procedure, isVegetarian, dishType);
+        allRecipes.addRecipe(newRecipe);
+
+        System.out.println("Du har oprettet denne ret:\n\n" + newRecipe);
 
     }
     public RecipeCollection getAllRecipes() {
