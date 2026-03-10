@@ -20,6 +20,11 @@ public class RecipeCollection {
         recipes = returnValue;
     }
 
+    public void addComment(Recipe recipe, Comment comment) {
+
+    }
+
+
     public void setRecipes(Recipe[] recipes) {
         this.recipes = recipes;
     }
@@ -88,4 +93,5 @@ public class RecipeCollection {
 
         return vegetarianRecipes;
     }
-    }
+
+}
