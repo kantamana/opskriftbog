@@ -71,6 +71,14 @@ public class RecipeCollection {
         return groceries;
     }
 
+    String[] getRecipeNames() {
+        String[] recipeNames = new String[getRecipes().length];
+        for (int i = 0; i < recipeNames.length; i++) {
+            recipeNames[i] = getRecipes()[i].title;
+        }
+        return recipeNames;
+    }
+
     //Returner vegetariske opskrifter
     public Recipe[] vegetarianRecipes(RecipeCollection recipes) {
         Recipe[] vegetarianRecipes = new Recipe[recipes.getRecipes().length]; //laver en ny tom liste

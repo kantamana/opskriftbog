@@ -42,6 +42,21 @@ public class UserInterface {
         System.out.println("Du har oprettet denne ret:\n\n" + newRecipe);
 
     }
+
+/*
+    public fetchGroceryList () {
+        String[] availableDishNames = allRecipes.getRecipeNames();
+        for (int i = 0; i < availableDishNames.length; i++) {
+            System.out.println(String.format("ret #%s: %s\n", i, availableDishNames[i]));
+        }
+        System.out.println("vælg fra listen de retter du vil have som tal med enkelt mellemrum imellem");
+
+        String title = scan.nextLine();
+
+    }
+*/
+
+
     public RecipeCollection getAllRecipes() {
         return allRecipes;
     }
