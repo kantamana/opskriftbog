@@ -32,6 +32,7 @@ public class UserInterface {
         boolean isVegetarian = vegetarian == 1;
 
         System.out.println("Hvilken type er retten?");
+        scan.nextLine();
         String dishType = scan.nextLine();
 
 

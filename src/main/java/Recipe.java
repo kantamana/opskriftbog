@@ -24,8 +24,9 @@ public class Recipe {
                 Opskrift: %s
                 Ingredienser: %s
                 Fremgangsmåde: %s
+                Vegetarisk? %s
                 Typeret: %s
-                """, title, Arrays.toString(getIngredients()), procedure, dishType);
+                """, title, Arrays.toString(getIngredients()), procedure, vegetarian ? "Ja" : "Nej", dishType);
     }
     public String[] getIngredients(){
         return ingredients;
