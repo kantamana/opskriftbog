@@ -79,6 +79,7 @@ public class UserInterface {
         }
     }
 
+    // hej her er en dummy commentar
     public void getHighestRecipesOfType() {
         System.out.println("Skriv hvilken type ret du vil have");
         String desiredType = scan.nextLine();
