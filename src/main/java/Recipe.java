@@ -22,10 +22,14 @@ public class Recipe {
     @Override
     public String toString() {
         String kommentarer = "";
+
+        if (comments != null) {
         for (Comment comment : comments) {
             kommentarer = kommentarer + "\n" + comment;
-        }
+        }}
         boolean ratingUnlocked = false;
+
+
         if (getNumberOfRatings() > 50) {
             ratingUnlocked = true;
         }
@@ -39,7 +43,7 @@ public class Recipe {
                 Typeret: %s
                 
                 Kommentarer: %s
-                """, title, ratingUnlocked ? getRating() : "rating låst", Arrays.toString(getIngredients()),
+                """, title, ratingUnlocked ? getRating() : "((under 50 ratings))", Arrays.toString(getIngredients()),
                 procedure, vegetarian ? "Ja" : "Nej", dishType, kommentarer);
     }
     public String[] getIngredients(){
@@ -85,4 +89,5 @@ public class Recipe {
         double mean = sum / getNumberOfRatings();
         this.rating = (double) Math.round(mean * 100)/100;
     }
+
 }

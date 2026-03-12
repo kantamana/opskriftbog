@@ -32,9 +32,21 @@ public class UserInterface {
         int vegetarian = scan.nextInt();
         boolean isVegetarian = vegetarian == 1;
 
-        System.out.println("Hvilken type er retten?");
-        scan.nextLine();
-        String dishType = scan.nextLine();
+        System.out.println("Hvilken type er retten? \n1: forret, 2: hovedret, 3: dessert, 4: andet");
+        int type = scan.nextInt();
+        String dishType = "";
+        if (type == 1) {
+            dishType = "forret";
+        }
+        else if (type == 2) {
+            dishType = "hovedret";
+        }
+        else if (type == 3) {
+            dishType = "dessert";
+        }
+        else if (type == 4) {
+            dishType = "andet";
+        }
 
 
         Recipe newRecipe = new Recipe(title, ingredients, procedure, isVegetarian, dishType);
