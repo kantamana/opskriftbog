@@ -12,7 +12,7 @@ public class Main {
         new Recipe("thaifood", new String[]{"broccoli", "bambus", "ris"}, "steg på panden", false, "Forret"),
         new Recipe("Boller i karry", new String[]{"fløde", "køb", "karry"}, "rør det sammen", true, "Hovedret")}
         );
-
+        //FAWOIFJAOFIJA
         recipeCollection.getRecipes()[0].addComment(new Comment("nice", 5));
         recipeCollection.getRecipes()[0].addComment(new Comment("nice", 1));
         recipeCollection.getRecipes()[0].addComment(new Comment("nice", 2));
