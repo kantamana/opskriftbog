@@ -25,17 +25,22 @@ public class Recipe {
         for (Comment comment : comments) {
             kommentarer = kommentarer + "\n" + comment;
         }
+        boolean ratingUnlocked = false;
+        if (getNumberOfRatings() > 50) {
+            ratingUnlocked = true;
+        }
 
         return String.format("""
                 Opskrift: %s
+                Rating: %s
                 Ingredienser: %s
                 Fremgangsmåde: %s
                 Vegetarisk? %s
                 Typeret: %s
                 
                 Kommentarer: %s
-                """, title, Arrays.toString(getIngredients()), procedure, vegetarian ? "Ja" : "Nej",
-                dishType, kommentarer);
+                """, title, ratingUnlocked ? getRating() : "rating låst", Arrays.toString(getIngredients()),
+                procedure, vegetarian ? "Ja" : "Nej", dishType, kommentarer);
     }
     public String[] getIngredients(){
         return ingredients;

@@ -17,6 +17,12 @@ public class Main {
         recipeCollection.getRecipes()[0].addComment(new Comment("nice", 1));
         recipeCollection.getRecipes()[0].addComment(new Comment("nice", 2));
 
+        int counter = 0;
+        while (counter < 50) {
+            recipeCollection.getRecipes()[0].addComment(new Comment("nice", 5));
+            counter ++;
+        }
+
         System.out.println(recipeCollection.getRecipes()[0].rating);
 
         System.out.println(recipeCollection.getRecipes()[0]);
