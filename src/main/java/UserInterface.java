@@ -32,7 +32,7 @@ public class UserInterface {
         int vegetarian = scan.nextInt();
         boolean isVegetarian = vegetarian == 1;
 
-        System.out.println("Hvilken type er retten? \n1: forret, 2: hovedret, 3: dessert, 4: andet");
+        System.out.println("Hvilken type er retten? \n1: Forret, 2: Hovedret, 3: Dessert, 4: Andet");
         int type = scan.nextInt();
         String dishType = "";
         if (type == 1) {
@@ -79,11 +79,10 @@ public class UserInterface {
         }
     }
 
-    // hej her er en dummy commentar
     public void getHighestRecipesOfType() {
         System.out.println("Skriv hvilken type ret du vil have");
         String desiredType = scan.nextLine();
-        System.out.println("De retter af din valgte type med højest rating er:");
+        System.out.println("Retten af din valgte type med højest rating er:");
         System.out.println(allRecipes.getHighestRecipesOfType(desiredType).toString());
     }
 

@@ -43,7 +43,7 @@ public class RecipeCollection {
         Recipe[] desiredRecipes = new Recipe[recipes.length];
         int counter = 0;
         for (Recipe recipe: recipes) {
-            if (recipe.getDishType() == type && recipe.getRating() >= WorldRecordRating) {
+            if (recipe.getDishType().equals(type) && recipe.getRating() >= WorldRecordRating) {
                 desiredRecipes[0] = recipe;
                 counter ++;
                 WorldRecordRating = recipe.getRating();
