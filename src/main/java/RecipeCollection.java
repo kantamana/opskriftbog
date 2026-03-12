@@ -19,7 +19,38 @@ public class RecipeCollection {
         returnValue[returnValue.length -1] = recipe;
         recipes = returnValue;
     }
+    /*public RecipeCollection getRecipesMinimumRating(int ratingAsStars) {
+        // Dette er ikke i overenstemmelse med frozen zone og bliver derfor ikke brugt
+        if (ratingAsStars > 5 || ratingAsStars < 0 ) {
+            System.out.println("invalid argument: rating must be from 0 to 5");
+            return null;
+        }
+        double desiredRating = ratingAsStars;
+        Recipe[] desiredRecipes = new Recipe[recipes.length];
+        int counter = 0;
+        for (Recipe recipe: recipes) {
+            if (recipe.getRating() >= desiredRating ) {
+                desiredRecipes[counter] = recipe;
+                counter ++;
+            }
+        }
+        return new RecipeCollection(Arrays.copyOfRange(desiredRecipes, 0, counter));
 
+    }*/
+
+    public RecipeCollection getHighestRecipesOfType(String type) {
+        double WorldRecordRating = 0.;
+        Recipe[] desiredRecipes = new Recipe[recipes.length];
+        int counter = 0;
+        for (Recipe recipe: recipes) {
+            if (recipe.getDishType() == type && recipe.getRating() >= WorldRecordRating) {
+                desiredRecipes[0] = recipe;
+                counter ++;
+                WorldRecordRating = recipe.getRating();
+            }
+        }
+        return new RecipeCollection(Arrays.copyOfRange(desiredRecipes, 0, counter));
+    }
 
     public void setRecipes(Recipe[] recipes) {
         this.recipes = recipes;
@@ -70,6 +101,8 @@ public class RecipeCollection {
         }
         return groceries;
     }*/
+
+
 
     String[] getRecipeNames() {
         String[] recipeNames = new String[getRecipes().length];
