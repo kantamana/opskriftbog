@@ -3,13 +3,26 @@ git pull
 
 
 ## This is how you upload your changes
-(idealy pull the most recent changes first)
+$git stash
 
-git add .         
+$git pull
 
-git commit -m "Describe your changes"
+hvis der ikke er noget at pulle,
+       git stash apply
+ellers
+-> gå ind i intellij 
+-> commit 
+-> Stash 
+-> Apply den øverste stash 
+(og hvis der er conflict skal du gennemgå dette også)
 
-git push
+
+
+$git add .         
+
+$git commit -m "Describe your changes"
+
+$git push
 
 ## also usefull
 
