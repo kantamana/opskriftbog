@@ -21,13 +21,21 @@ public class Recipe {
 
     @Override
     public String toString() {
+        String kommentarer = "";
+        for (Comment comment : comments) {
+            kommentarer = kommentarer + "\n" + comment;
+        }
+
         return String.format("""
                 Opskrift: %s
                 Ingredienser: %s
                 Fremgangsmåde: %s
                 Vegetarisk? %s
                 Typeret: %s
-                """, title, Arrays.toString(getIngredients()), procedure, vegetarian ? "Ja" : "Nej", dishType);
+                
+                Kommentarer: %s
+                """, title, Arrays.toString(getIngredients()), procedure, vegetarian ? "Ja" : "Nej",
+                dishType, kommentarer);
     }
     public String[] getIngredients(){
         return ingredients;

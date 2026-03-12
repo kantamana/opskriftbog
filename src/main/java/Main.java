@@ -19,6 +19,8 @@ public class Main {
 
         System.out.println(recipeCollection.getRecipes()[0].rating);
 
+        System.out.println(recipeCollection.getRecipes()[0]);
+
         UserInterface ui = new UserInterface(recipeCollection);
         //ui.addRecipe();
         ui.fetchGroceryList();
