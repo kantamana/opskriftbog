@@ -131,4 +131,8 @@ public class RecipeCollection {
         return vegetarianRecipes;
     }
 
+    @Override
+    public String toString() {
+        return Arrays.toString(getRecipeNames());
+    }
 }

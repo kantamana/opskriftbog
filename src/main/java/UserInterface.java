@@ -79,6 +79,13 @@ public class UserInterface {
         }
     }
 
+    public void getHighestRecipesOfType() {
+        System.out.println("Skriv hvilken type ret du vil have");
+        String desiredType = scan.nextLine();
+        System.out.println("De retter af din valgte type med højest rating er:");
+        System.out.println(allRecipes.getHighestRecipesOfType(desiredType).toString());
+    }
+
     public RecipeCollection getAllRecipes() {
         return allRecipes;
     }
